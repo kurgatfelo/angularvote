@@ -1,0 +1,9 @@
+<p>{{quote.description}}</p>
+<p>This  was posted on  {{quote.completeDate|dateCount}} days ago</p>
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger btn1">Delete Quote</button>
+<div class="d-inline float-end icon">
+    <i class="fa fa-thumbs-up up" aria-hidden="true" (click)="upvote(index)" ></i>
+      <span> {{ quote.upvote }}</span>
+      <i class="fa fa-thumbs-down down" aria-hidden="true " (click)="downvote(index)" ></i>
+      <span> {{ quote.downvote}}</span>
+    </div>

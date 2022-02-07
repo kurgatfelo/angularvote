@@ -1,0 +1,67 @@
+.my_navbar{
+    margin-left:20px ;
+
+}
+.lightfelo{
+    background-color: green;
+    width: 100%;
+}
+
+.my_navbar ul li a{
+    color: black;
+    font: 50px
+}
+.my_navbar ul li{
+    margin:20px;
+    display: flex;
+    font-size: 30px;
+}
+.my_navbar ul{
+    margin-right: 100px;
+}
+.cont1{
+    background-color: hotpink;
+}
+.cont1 h1{
+    text-align: center;
+}
+
+
+
+.form2{
+    text-align: center;
+    background-color: green;
+    color: blue;
+}
+#first{
+    margin-top: 50px;
+}
+.intro p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+.desc-item h1{
+font-size: 40px;
+}
+#best{
+    font-size: 40px;
+}
+.details{
+    width: 100%;
+    text-align: center;
+}
+#quote{
+    font-size: 35px;
+    background-color: white;
+    height: 100px;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+#quotedetails{
+    font-size: 25px;
+    padding-top: 10px;
+}
+.form2{
+    width: 100%;
+    border-radius: 20px;
+}
