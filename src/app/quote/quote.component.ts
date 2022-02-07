@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
     new Quote(4,'NELSON MANDELA','"Its Not Over Untill Its Over"',0,0,new Date(2019,11,18)),
     
   ];
-  {
+  deleteQuote(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
@@ -22,7 +22,7 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote){
+  {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
     quote.completeDate = new Date(quote.completeDate)
