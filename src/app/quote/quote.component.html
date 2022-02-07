@@ -1,0 +1,176 @@
+<div class="container-fluid cont1">
+  <div class="row">
+    <div class="lightfelo">
+    <div class="col-md-6">
+     
+     
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact-us.html">contact</a>
+          </li>
+          
+        </ul>
+      </nav>
+    </div>
+    </div>
+    <h1 id="first">WELCOME TO THE WORLD OF QUOTES</h1>
+    <div class="intro">
+
+      <div class="desc">
+
+        <div class="desc-item">
+          <p>Get update news stay connected</p>
+          <h1>Quote is<br> the make your confidence.</h1>
+
+          <p>We do offer variety of quotes that will make you be you:
+          </p>
+          <p id="item-list">
+          <ul>
+            <li>
+              Motivational
+            </li>
+            <li>
+              Inspirational
+            </li>
+            <li>
+              Encouregement
+            </li>
+
+          </ul>
+         
+
+          
+
+        </div>
+        <div class="desc-image">
+          <img src="images/afdc94afc6074d47578e908899bd625a.jpg" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <h1 id="best">The Best Quotes</h1>
+    <hr>
+
+    <div class="row-fluid details">
+      <div class="col-md-6-fluid">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div>
+            <h6 id="quote">{{quote.name}}</h6>
+            <button (click)='toggleDetails(i)' class="btn btn-primary">Show Details</button>
+          </div>
+          <div id="quotedetails" *ngIf='quote.showDescription'>
+            <app-quote-detail [quote]='quote' (isComplete)='deleteQuote($event,i)' (quotes)="up(i)"
+              (quotesdown)="down(i)"></app-quote-detail>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <div class="col-md-6 form2 form2">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
+    </div>
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+      <!-- Footer Links -->
+      <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+                  <!-- Content -->
+                  <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
+                  <p>Mobile beauty parlour</p>
+                  <p>500 Kimathi Street </p>
+                  <p>Nairobi</p>
+
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+
+
+                  <!-- Contact details -->
+                  <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                  <ul class="list-unstyled">
+
+                      <li>
+                          <p>
+                              <i class="fas fa-envelope mr-3"></i> Email:info@mbp.com
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              <i class="fas fa-phone mr-3"></i> +254 01 23 567 88
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              <i class="fas fa-print mr-3"></i> +254 01 234 56 89
+                          </p>
+                      </li>
+                      <!-- Facebook -->
+                      <a type="button" class="btn-floating btn-fb">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                      <!-- Twitter -->
+                      <a type="button" class="btn-floating btn-tw">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <!-- Google +-->
+                      <a type="button" class="btn-floating btn-gplus">
+                          <i class="fab fa-google-plus-g"></i>
+                      </a>
+                  </ul>
+
+              </div>
+              <!-- Grid column -->
+
+              <hr class="clearfix w-100 d-md-none">
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+                  <!-- Social buttons -->
+                  <label style="width: 250px; margin-left: -25px;" for="formGroupExampleInput">Subscribe
+                      to
+                      our Newsletter</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1"
+                      aria-describedby="emailHelp" placeholder=" Enter your email here"
+                      style="width: 200px;">
+                  <button style="margin-left: 205px; margin-top: -60px;" type="submit"
+                      class="btn btn-primary mb-2">Join</button>
+
+
+
+              </div>
+              <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+
+
+  </footer>
+  </div>
+</div>
