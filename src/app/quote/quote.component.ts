@@ -28,10 +28,10 @@ export class QuoteComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate)
     this.quotes.push(quote)
   }
-  (index){
+  toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  completeQuote(isComplete, index){
+  (isComplete, index){
     if (isComplete) {
       this.quotes.splice(index,1);
     }
