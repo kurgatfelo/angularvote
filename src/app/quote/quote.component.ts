@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Quote } from '../quote';
 @Component({
   selector: 'app-quote',
-  
+  templateUrl: './quote.component.html',
   styleUrls: ['./quote.component.css']
 })
-export class QuoteComponent implements OnInit {
+ {
   quotes: Quote[] = [
     new Quote(1, 'BARACK OBAMA', '"Yes We Can"',0,0,new Date(2019,9,14)),
     new Quote(2,'KIPCHOGE KEINO','"No Human Is Limited"',0,0,new Date(2019,6,9)),
