@@ -7,13 +7,13 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-   
+    new Quote(1, 'BARACK OBAMA', '"Yes We Can"',0,0,new Date(2019,9,14)),
     new Quote(2,'KIPCHOGE KEINO','"No Human Is Limited"',0,0,new Date(2019,6,9)),
     new Quote(3,'FELIX KIBET','"Quitters Are Never Winners"',0,0,new Date(2019,1,12)),
     new Quote(4,'NELSON MANDELA','"Its Not Over Untill Its Over"',0,0,new Date(2019,11,18)),
     
   ];
-  deleteQuote(isComplete, index){
+  {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
